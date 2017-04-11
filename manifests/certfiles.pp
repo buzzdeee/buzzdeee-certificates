@@ -1,3 +1,6 @@
+# The defined type that takes
+# care to deploy certificate
+# files
 define certificates::certfiles (
   $hieraname,
   $owner,
@@ -5,7 +8,7 @@ define certificates::certfiles (
   $mode,
   $filename,
 ) {
-  file { "$filename":
+  file { $filename:
     owner   => $owner,
     group   => $group,
     mode    => $mode,
