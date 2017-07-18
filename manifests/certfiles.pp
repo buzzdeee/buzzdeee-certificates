@@ -12,6 +12,6 @@ define certificates::certfiles (
     owner   => $owner,
     group   => $group,
     mode    => $mode,
-    content => hiera($hieraname),
+    content => lookup($hieraname),
   }
 }
